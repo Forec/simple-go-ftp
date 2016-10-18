@@ -10,7 +10,7 @@ There are two files `server.go` and `client.go`, you should put them under diffe
 * `client.exe` has two parameters, host and port, point where the client should connect. You need to input password to get authorisation after connection.
 
 ## Support Commands
-version v0.1 supports the following commands temporarily. The buffer size is set to 4MB, you can resize it. The clocker for sending/receiving files is 1e3 ns, you can change it to influence the speed of transmitting. The current transmitting speed is about 2M/s in local machines.
+version v0.1 supports the following commands temporarily. The buffer size is set to 4MB, you can resize it. The clocker for sending/receiving files is 1e3 ns, you can change it to influence the speed of transmitting. The current transmitting speed is about 2.5M/s in local machines.
 * cd: change current path
 * ls or dir: get file info
 * put: put local file to remote sever
@@ -20,6 +20,7 @@ version v0.1 supports the following commands temporarily. The buffer size is set
 ## Update-logs
 * 2016-9-15: Add project.
 * 2016-10-18: Finish basic functions, version v0.1. Build repository.
+* 2016-10-19: Update recv function.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.

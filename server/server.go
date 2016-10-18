@@ -134,20 +134,10 @@ func recvFile(conn net.Conn, filename string, buf []byte) (ok bool) {
 			fmt.Println("ERROR: Transmission Error.")
 			return false
 		}
-		if length == buflen {
-			outputLength, outputError := outputWriter.Write(buf)
-			if outputError != nil || outputLength != length {
-				fmt.Println("ERROR: File Write Error.")
-				return false
-			}
-		} else {
-			for i := 0; i < length; i++ {
-				outputError := outputWriter.WriteByte(buf[i])
-				if outputError != nil {
-					fmt.Println("ERROR: File Write Error.")
-					return false
-				}
-			}
+		outputLength, outputError := outputWriter.Write(buf[:length])
+		if outputError != nil || outputLength != length {
+			fmt.Println("ERROR: File Write Error.")
+			return false
 		}
 		fileLength = fileLength + length
 		if 100*fileLength/totalFileLength > percent {
