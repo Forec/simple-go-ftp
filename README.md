@@ -21,6 +21,7 @@ version v0.1 supports the following commands temporarily. The buffer size is set
 * 2016-9-15: Add project.
 * 2016-10-18: Finish basic functions, version v0.1. Build repository.
 * 2016-10-19: Update recv function.
+* 2016-10-31：Fix help message in server and client.
 
 # License
 All codes in this repository are licensed under the terms you may find in the file named "LICENSE" in this directory.

@@ -36,9 +36,9 @@ import (
 )
 
 var address_h = flag.String("h", "127.0.0.1",
-	"Bind server with assigned IP address, default 127.0.0.1")
+	"Bind server with assigned IP address")
 var port_p = flag.Int("p", 8080,
-	"Bind server with assigned port, default 8080")
+	"Bind server with assigned port")
 var password string
 var buflen = 4096 * 1024
 

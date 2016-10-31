@@ -34,9 +34,9 @@ import (
 )
 
 var address_h = flag.String("h", "127.0.0.1",
-	"Bind server with assigned IP address, default 127.0.0.1")
+	"Remote server address")
 var port_p = flag.Int("p", 8080,
-	"Bind server with assigned port, default 8080")
+	"Remote server port")
 var buflen = 4096 * 1024
 
 func dealWithArgs() (ip string, port int, ok bool) {
